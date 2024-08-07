@@ -1,4 +1,4 @@
-package pixel.botkt.core.annotations
+package pixel.botkt.core.annotation
 
 import pixel.botkt.core.util.DependencyInjectionContainer
 import kotlin.reflect.KClass
