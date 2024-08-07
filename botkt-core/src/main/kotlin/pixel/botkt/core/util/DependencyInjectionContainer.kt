@@ -16,7 +16,7 @@ class DependencyInjectionContainer <C> {
     private val injectors = mutableMapOf<KClass<Injector<C>>, Injector<C>>()
 
     fun inject(parameter: KParameter, context: C): Option<*> { TODO() }
-    fun inject(function: KFunction<*>, context: C): Option<*> { TODO() }
+    fun <R> inject(function: KFunction<R>, context: C): R { TODO() }
 
     fun createInjector(injector: KClass<Injector<C>>): Injector<C> { TODO() }
 
