@@ -1,12 +1,11 @@
 plugins {
     kotlin("jvm")
-    application
 }
 
 dependencies {
     api(project(":botkt-core"))
 }
 
-application {
-    mainClass.set("pixel.botkt.application.BotApplicationKt")
-}
+//application {
+  //  mainClass.set("pixel.botkt.application.BotApplicationKt")
+//}

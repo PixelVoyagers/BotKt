@@ -1,0 +1,18 @@
+name: Format
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    paths: ['**']
+jobs:
+  formatting:
+    name: Format
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      - name: Setup Build
+        uses: ./.github/actions/setup
+      - name: Run Spotless Formatting Check with Gradle
+        run: ./gradlew spotlessCheck --warning-mode all --build-cache
